@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Voting Age Validator</title>
+</head>
+<style>
+* {
+background-color: lavender;
+}
+.new {
+width: 95%;
+border: 3px solid darkblue;
+border-radius: 10px;
+padding: 10px;
+align-items: center;
+}
+.btn {
+background-color: bisque;
+}
+</style>
+<body>
+<form>
+
+<h2 align="center" style="color:brown;font-family:calibri;background-
+color:azure">Voting Age Validator</h2>
+
+<div align="center" class="new" style="color:rebeccapurple">
+<input type="text" placeholder="Enter Your Age" id="age" size="50"
+/><br/><br/><br/>
+<div class="container">
+<input type="button" class="btn" onclick="checkVotingEligibility()"
+value="VALIDATE" />
+</div>
+</div>
+</form>
+<script>
+function checkVotingEligibility() {
+var age = document.getElementById("age").value;
+if (age >= 18) {
+alert("You are eligible to vote.");
+} else {
+alert("You are not eligible to vote.");
+}
+}
+</script>
+</body>
+</html>

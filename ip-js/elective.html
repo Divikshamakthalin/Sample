@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Credentials</title>
+<script language="Javascript" type="text/javascript">
+function login() {
+var k = document.myform.user.value;
+var m = document.myform.pass.value;
+if (k == "" || m == "") {
+alert("Please fill in both the username and password.");
+return false;
+}
+if (k == "2005034" && m == "srec@123") {
+alert("Login successful!");
+window.location = "course_selection.html";
+return false;
+} else {
+alert("Invalid username or password.");
+return false;
+}
+}
+</script>
+<style type="text/css" media="all">
+body {
+background-color: #f0f0f5;
+font-family: Arial, sans-serif;
+}
+h1 {
+text-align: center;
+padding: 20px;
+background-color: #4CAF50;
+color: white;
+font-size: 28px;
+border-radius: 10px;
+}
+.mail {
+margin: auto;
+width: 40%;
+border: 2px solid #ccc;
+border-radius: 10px;
+padding: 20px;
+background-color: #f9f9f9;
+margin-top: 50px;
+}
+#mail {
+width: 100%;
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 10px;
+margin-top: 10px;
+}
+.btn {
+background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.btn:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h1>SREC COURSE REGISTRATION</h1>
+<form name="myform" onsubmit="return login()">
+    <div align="center" class="mail">
+        <label for="user">UserName:</label><br>
+        <input type="text" name="user" placeholder="Enter UserName" id="mail"
+        required><br><br>
+        
+        <label for="pass">Password:</label><br>
+        <input type="password" name="pass" placeholder="Enter password" id="mail"
+        required><br><br>
+        
+        <input type="submit" class="btn" value="Submit">
+        <input type="reset" class="btn" value="Reset">
+        </div>
+        </form>
+        </body>
+        </html>
